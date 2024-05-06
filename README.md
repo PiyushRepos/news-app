@@ -34,6 +34,7 @@
 
 <h3>Screenshots</h3>
 
+![Screenshot 1](./mobile-preview.png)
 ![Screenshot 1](./preview.png)
 
 
