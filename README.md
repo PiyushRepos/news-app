@@ -32,9 +32,6 @@
   <li>Clicking on a news article will redirect users to the full article for more information.</li>
 </ul>
 
-<h3>Demo</h3>
-<p>You can access the live demo of the website <a target="_blank" href="https://Piyushrepos.com/news-app/">here.</a> <br></p>
-
 <h3>Screenshots</h3>
 
 ![Screenshot 1](./preview.png)
