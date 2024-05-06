@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: var(--secondary-text-color);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4rem;
+}
+
+.container {
+  width: 82vw;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  background-color: #f0f8fd;
+  box-shadow: 0 1px 4px #ffffff43;
+  border-bottom: 1px solid #00000035;
+  position: fixed;
+  top: 0;
+}
+
+.navbar {
+  height: 70px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icons {
+  display: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0.4rem;
+}
+
+.icons i {
+  margin-left: 0 0.5rem;
+}
+
+.nav__logo h2 {
+  background: linear-gradient(to right, royalblue, salmon, coral);
+  color: transparent;
+  background-clip: text;
+}
+
+.nav__items {
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav__items .nav__link {
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav__items .nav__link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.2px;
+  background: var(--accent-color);
+  bottom: -2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__items .nav__link:hover::before {
+  width: 100%;
+  color: var(--accent-color);
+}
+
+.nav__link.active,
+.nav__link.active::before {
+  color: var(--accent-color);
+  width: 100%;
+}
+
+.nav__search .nav__search--input {
+  font-weight: 600;
+  padding: 6px 10px;
+  border: 1px solid var(--accent-color-dark);
+  outline: none;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+.nav__search .nav__search--btn {
+  color: #fff;
+  border: none;
+  background-color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.nav__search .nav__search--btn:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.main {
+  padding: 7rem 0;
+  min-height: calc(100vh - 108px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 22.5rem);
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
+  column-gap: 2.5rem;
+}
+
+.main__news--card {
+  overflow: hidden;
+  width: 22.5rem;
+  min-height: 25rem;
+  box-shadow: 0 0 4px #d4ecff;
+  border-radius: 5px;
+  background: #fff;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.main__news--img {
+  width: 100%;
+  max-height: 25vh;
+  object-fit: cover;
+}
+
+.main__news---title {
+  padding: 7px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+.main__news--info {
+  padding: 1px 7px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+.main__news--desc {
+  padding: 7px;
+  font-weight: 500;
+}
+
+.main__news--card:hover {
+  transform: translateY(-10px);
+}
+
+.footer p {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 927px) {
+  .navbar {
+    overflow: visible;
+  }
+
+  .nav__items {
+    position: absolute;
+    right: 70px;
+    top: 100%;
+    flex-direction: column;
+    gap: 0.2rem;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #f5eded;
+    display: none;
+  }
+
+  .nav__items.toggle {
+    display: block;
+  }
+
+  .nav__items .nav__link {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .icons {
+    display: inline-block;
+  }
+
+  .icons i:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 558px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .main {
+    width: 100%;
+    padding: 7rem;
+  }
+
+  .icons {
+    display: inline-block;
+  }
+
+  .nav__search {
+    display: none;
+    position: absolute;
+  }
+
+  .nav__search.active {
+    display: inline-block;
+  }
+
+  .icons i:first-child {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+}

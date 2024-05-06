@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App By Piyush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="container flex navbar">
+        <a class="nav__logo" href="#">
+          <h2>Newsify.</h2>
+        </a>
+        <ul class="nav__items flex" id="nav__items">
+          <li class="nav__link" id="IPL" onclick="onNavItemClick('IPL')">
+            IPL
+          </li>
+          <li
+            class="nav__link"
+            id="Finance"
+            onclick="onNavItemClick('Finance')"
+          >
+            Finance
+          </li>
+          <li
+            class="nav__link"
+            id="Politics"
+            onclick="onNavItemClick('Politics')"
+          >
+            Politics
+          </li>
+          <li
+            class="nav__link"
+            id="Technology"
+            onclick="onNavItemClick('Technology')"
+          >
+            Technology
+          </li>
+        </ul>
+        <div class="nav__search" id="nav__search">
+          <input
+            type="text"
+            placeholder="e.g. Science"
+            autocomplete="off"
+            id="nav__search--input"
+            class="nav__search--input"
+          />
+          <button class="nav__search--btn" id="nav__search--btn">Search</button>
+        </div>
+        <div class="icons">
+          <i class="ri-search-line icon" id="searchIcon"></i>
+          <i class="ri-more-2-fill icon" id="menuIcon"></i>
+        </div>
+      </div>
+    </nav>
+    <main class="main container" id="main"></main>
+    <template id="template__news--card">
+      <div class="main__news--card">
+        <img
+          class="main__news--img"
+          id="main__news--img"
+          src="https://via.placeholder.com/400x300"
+          alt="News Image"
+        />
+        <div class="main__news--content">
+          <h3 class="main__news---title" id="main__news--title">
+            Arjun Tendulakar: The burden of being Sachin Tendulkar's son
+          </h3>
+          <p class="main__news--info" id="main__news--info">•</p>
+          <p class="main__news--desc" id="main__news--desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            perspiciatis tenetur in facere eius aspernatur vitae laboriosam
+            laborum aliquid vero.
+          </p>
+        </div>
+      </div>
+    </template>
+    <footer class="footer">
+      <p>&copy;Copyright Reserved by Piyush Kumar</p>
+    </footer>
+  </body>
+</html>
