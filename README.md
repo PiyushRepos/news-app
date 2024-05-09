@@ -18,6 +18,11 @@
   <li><b>JavaScript</b></li>
 </ul>
 
+<h3>Screenshots</h3>
+
+![Screenshot 1](./preview.png)
+![Screenshot 1](./mobile-preview.png)
+
 <h3>Setup</h3>
 <ol>
   <li>Clone the repository:</li>
@@ -31,12 +36,6 @@
   <li>Users can also utilize the search bar to find specific news articles.</li>
   <li>Clicking on a news article will redirect users to the full article for more information.</li>
 </ul>
-
-<h3>Screenshots</h3>
-
-![Screenshot 1](./mobile-preview.png)
-![Screenshot 1](./preview.png)
-
 
 <h3>Contributing</h3>
 <p>Contributions are welcome! Feel free to submit pull requests or open issues for any bugs or feature requests.</p>
